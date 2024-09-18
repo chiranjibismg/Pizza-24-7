@@ -2,51 +2,49 @@
 @import '~noty/src/noty.scss';
 @import '~noty/src/themes/mint.scss';
 
+
+
 body {
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: $dark;
+    // height: 4000px;
 }
-
-nav li:last-child a{
+nav li:last-child a {
     background: $primary;
     &:hover {
         background: $primary-hover;
     }
 }
-
 nav li a {
     transition: $smooth;
     &:hover {
         color: $primary;
     }
 }
+section.hero {
+    background: $secondary;
+    // height: 4000px;
 
-section.hero{
+}
+.size {
     background: $secondary;
 }
-
-.size{
-    background: $secondary
-}
-
-.add-to-cart{
+.add-to-cart {
     border: 2px solid $primary;
     color: $primary;
     transition: $smooth;
-
-    &:hover{
+    &:hover {
         background: $primary;
-        color: $pure;
         border-color: $pure;
+        color: $pure;
     }
-
-    &:focus{
+    &:focus {
         outline: none;
     }
 }
 
-.btn-primary{
+.btn-primary {
     background: $primary;
     transition: $smooth;
     &:hover {
@@ -54,14 +52,17 @@ section.hero{
     }
 }
 
-section.cart{
+section.cart {
     background: $secondary;
-    .amount{
+    min-height: calc(100vh - 86px);
+    &.amount {
         color: $primary;
     }
+
+    
 }
 
-section.login{
+section.login {
     background: $secondary;
     min-height: calc(100vh - 86px);
     a {
@@ -72,28 +73,24 @@ section.login{
     }
 }
 
-.noty_theme__mint{
+.noty_theme__mint {
     border-radius: 50px!important;
     padding-left: 8px!important;
 }
 
-a.link{
+a.link {
     color: $primary;
 }
-
-section.status{
+section.status {
     background: $secondary;
     min-height: calc(100vh - 86px);
 }
-
 .status-box {
     padding: 60px 0 0;
 }
-
 .status-box ul {
     margin-left: 84px;
 }
-
 .status-box ul li span {
     position: relative;
     padding-left: 20px;

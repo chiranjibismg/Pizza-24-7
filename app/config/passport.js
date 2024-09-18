@@ -1,3 +1,4 @@
+
 const LocalStrategy = require('passport-local').Strategy
 const User = require('../models/user')
 const bcrypt = require('bcrypt') 
@@ -29,12 +30,7 @@ function init(passport){
         done(null, user._id)
     })
 
-    // This got depreciated
-    // passport.deserializeUser((id, done)=>{
-    //     User.findByID(id, (err, user)=>{
-    //         done(err, user)
-    //     })
-    // })
+ 
     passport.deserializeUser((id, done) => {
         User.findById(id).then(user => {
           done(null, user);

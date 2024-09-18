@@ -273,8 +273,8 @@ section.hero {
 }
 .add-to-cart:hover {
   background: #FE5F1E;
-  color: #fff;
   border-color: #fff;
+  color: #fff;
 }
 .add-to-cart:focus {
   outline: none;
@@ -290,8 +290,9 @@ section.hero {
 
 section.cart {
   background: #F8F8F8;
+  min-height: calc(100vh - 86px);
 }
-section.cart .amount {
+section.cart.amount {
   color: #FE5F1E;
 }
 

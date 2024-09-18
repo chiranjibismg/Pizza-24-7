@@ -9,15 +9,14 @@ function statusController(){
                     const eventEmitter = req.app.get('eventEmitter')
                     eventEmitter.emit('orderUpdated', {id: req.body.orderId, status: req.body.status})
 
-                    res.redirect('/admin/orders');
+                    return  res.redirect('/admin/orders');  
                 })
                 .catch(err => {
-                    console.error(err); // Handle error appropriately
-                    res.redirect('/admin/orders');
+                    console.error(err); 
+                    return  res.redirect('/admin/orders');
                 });
         }
     }
 }
 
 module.exports = statusController
-

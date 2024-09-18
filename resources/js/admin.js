@@ -2,10 +2,9 @@ import axios from 'axios'
 import moment from 'moment'
 import Noty from 'noty'
 
-export function initAdmin(socket){
+export function initAdmin(socket) {
     const orderTableBody = document.querySelector('#orderTableBody')
     let orders = []
-
     let markup
 
     axios.get('/admin/orders', {
@@ -29,8 +28,7 @@ export function initAdmin(socket){
         }).join('')
       }
 
-
-    function generateMarkup(orders){
+    function generateMarkup(orders) {
         return orders.map(order => {
             return `
                 <tr>
@@ -80,9 +78,7 @@ export function initAdmin(socket){
             </tr>
         `
         }).join('')
-        
     }
-
     // Socket
     socket.on('orderPlaced', (order) => {
         new Noty({
